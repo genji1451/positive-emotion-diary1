@@ -1,0 +1,55 @@
+{
+  "expo": {
+    "name": "expo-app",
+    "slug": "expo-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "jsEngine": "hermes",
+    "splash": {
+      "image": "./assets/images/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "jsEngine": "hermes",
+      "bundleIdentifier": "com.positive.emotionDiary",
+      "googleMobileAdsAppId": "ca-app-pub-5436156863737872~1609023736"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "jsEngine": "hermes",
+      "package": "com.positive.emotionDiary",
+      "googleMobileAdsAppId": "ca-app-pub-5436156863737872~1609023736"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "react-native-google-mobile-ads",
+        {
+          "androidAppId": "ca-app-pub-5436156863737872~1609023736",
+          "iosAppId": "ca-app-pub-5436156863737872~1609023736",
+          "delay": 3000
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "409e414b-bb86-4fe1-9985-4d9022b9c65d"
+      }
+    }
+  }
+}
