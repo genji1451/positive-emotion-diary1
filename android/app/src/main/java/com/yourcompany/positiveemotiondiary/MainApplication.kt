@@ -1,4 +1,4 @@
-package com.positive.emotionDiary
+package com.yourcompany.positiveemotiondiary
 
 import android.app.Application
 import android.content.res.Configuration

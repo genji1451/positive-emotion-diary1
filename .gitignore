@@ -35,3 +35,37 @@ yarn-error.*
 # typescript
 *.tsbuildinfo
 .vercel
+
+# Node
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Android/IntelliJ
+android/app/build/
+android/build/
+android/.gradle/
+android/.idea/
+android/local.properties
+*.iml
+
+# iOS
+ios/build/
+ios/Pods/
+ios/*.xcworkspace
+ios/*.xcodeproj
+
+# Env files
+.env*
+
+# Debug files
+*.log
+
+# Build files
+build/
+dist/
+
+# Keystore files
+*.keystore
+!debug.keystore

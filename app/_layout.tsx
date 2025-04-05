@@ -8,7 +8,7 @@ import { ErrorBoundary } from "./error-boundary";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useTheme } from "@/store/settingsStore";
 import { Colors } from "@/constants/colors";
-import mobileAds from 'react-native-google-mobile-ads';
+// import mobileAds from 'react-native-google-mobile-ads';
 
 export const unstable_settings = {
   initialRouteName: "(tabs)",
@@ -50,27 +50,31 @@ export default function RootLayout() {
 
   useEffect(() => {
     // Initialize AdMob
-    mobileAds()
-      .initialize()
-      .then(adapterStatuses => {
-        // Initialization complete
-      });
+    // mobileAds()
+    //   .initialize()
+    //   .then(adapterStatuses => {
+    //     // Initialization complete
+    //   });
   }, []);
 
   if (!loaded) {
     return null;
   }
 
+  const screenOptions = {
+    headerShown: false,
+    statusBarStyle: 'dark',
+    statusBarColor: Colors.background,
+    statusBarTranslucent: true,
+    ...(Platform.OS === 'android' && {
+      statusBarColor: isDarkMode ? Colors.darkBackground : Colors.background,
+    }),
+  };
+
   return (
     <ErrorBoundary>
       <Stack 
-        screenOptions={{ 
-          headerShown: false,
-          statusBarStyle: isDarkMode ? 'light' : 'dark',
-          ...(Platform.OS === 'android' && {
-            statusBarColor: isDarkMode ? Colors.darkBackground : Colors.background,
-          }),
-        }}
+        screenOptions={screenOptions}
       >
         {!hasSeenOnboarding && (
           <Stack.Screen

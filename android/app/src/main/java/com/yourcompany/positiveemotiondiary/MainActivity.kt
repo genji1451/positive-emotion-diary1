@@ -1,4 +1,4 @@
-package com.positive.emotionDiary
+package com.yourcompany.positiveemotiondiary
 import expo.modules.splashscreen.SplashScreenManager
 
 import android.os.Build

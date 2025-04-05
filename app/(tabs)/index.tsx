@@ -36,10 +36,7 @@ export default function HomeScreen() {
       styles.container,
       isDarkMode ? styles.containerDark : null
     ]}>
-      <StatusBar 
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'} 
-        backgroundColor={isDarkMode ? Colors.darkBackground : Colors.background}
-      />
+      <StatusBar style="dark" />
       
       <KeyboardAvoidingView
         style={styles.keyboardAvoidingView}

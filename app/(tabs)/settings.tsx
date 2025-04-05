@@ -20,7 +20,6 @@ import {
 import { Colors } from '@/constants/colors';
 import useSettingsStore from '@/store/settingsStore';
 import { useTheme } from '@/store/settingsStore';
-import AdBanner from '@/components/AdBanner';
 
 export default function SettingsScreen() {
   const { 
@@ -185,8 +184,6 @@ export default function SettingsScreen() {
           </TouchableOpacity>
         </View>
       </View>
-      
-      <AdBanner />
     </SafeAreaView>
   );
 }
